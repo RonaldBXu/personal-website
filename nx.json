@@ -33,13 +33,13 @@
     ]
   },
   "projects": {
-    "todos": {
+    "Ronald Xu": {
       "tags": []
     },
-    "todos-e2e": {
+    "Ronald Xu-e2e": {
       "tags": [],
       "implicitDependencies": [
-        "todos"
+        "Ronald Xu"
       ]
     }
   }

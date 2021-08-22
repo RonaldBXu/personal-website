@@ -1,22 +1,22 @@
 {
   "version": 2,
   "projects": {
-    "todos": {
-      "root": "apps/todos",
-      "sourceRoot": "apps/todos/src",
+    "Ronald Xu": {
+      "root": "apps/Ronald Xu",
+      "sourceRoot": "apps/Ronald Xu/src",
       "projectType": "application",
       "targets": {
         "build": {
           "executor": "@nrwl/web:build",
           "outputs": ["{options.outputPath}"],
           "options": {
-            "outputPath": "dist/apps/todos",
-            "index": "apps/todos/src/index.html",
-            "main": "apps/todos/src/main.tsx",
-            "polyfills": "apps/todos/src/polyfills.ts",
-            "tsConfig": "apps/todos/tsconfig.app.json",
-            "assets": ["apps/todos/src/favicon.ico", "apps/todos/src/assets"],
-            "styles": ["apps/todos/src/styles.css"],
+            "outputPath": "dist/apps/Ronald Xu",
+            "index": "apps/Ronald Xu/src/index.html",
+            "main": "apps/Ronald Xu/src/main.tsx",
+            "polyfills": "apps/Ronald Xu/src/polyfills.ts",
+            "tsConfig": "apps/Ronald Xu/tsconfig.app.json",
+            "assets": ["apps/Ronald Xu/src/favicon.ico", "apps/Ronald Xu/src/assets"],
+            "styles": ["apps/Ronald Xu/src/styles.css"],
             "scripts": [],
             "webpackConfig": "@nrwl/react/plugins/webpack"
           },
@@ -24,8 +24,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "apps/todos/src/environments/environment.ts",
-                  "with": "apps/todos/src/environments/environment.prod.ts"
+                  "replace": "apps/Ronald Xu/src/environments/environment.ts",
+                  "with": "apps/Ronald Xu/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -48,12 +48,12 @@
         "serve": {
           "executor": "@nrwl/web:dev-server",
           "options": {
-            "buildTarget": "todos:build",
+            "buildTarget": "Ronald Xu:build",
             "hmr": true
           },
           "configurations": {
             "production": {
-              "buildTarget": "todos:build:production",
+              "buildTarget": "Ronald Xu:build:production",
               "hmr": false
             }
           }
@@ -61,41 +61,41 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/todos/**/*.{ts,tsx,js,jsx}"]
+            "lintFilePatterns": ["apps/Ronald Xu/**/*.{ts,tsx,js,jsx}"]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/todos"],
+          "outputs": ["coverage/apps/Ronald Xu"],
           "options": {
-            "jestConfig": "apps/todos/jest.config.js",
+            "jestConfig": "apps/Ronald Xu/jest.config.js",
             "passWithNoTests": true
           }
         }
       }
     },
-    "todos-e2e": {
-      "root": "apps/todos-e2e",
-      "sourceRoot": "apps/todos-e2e/src",
+    "Ronald Xu-e2e": {
+      "root": "apps/Ronald Xu-e2e",
+      "sourceRoot": "apps/Ronald Xu-e2e/src",
       "projectType": "application",
       "targets": {
         "e2e": {
           "executor": "@nrwl/cypress:cypress",
           "options": {
-            "cypressConfig": "apps/todos-e2e/cypress.json",
-            "tsConfig": "apps/todos-e2e/tsconfig.e2e.json",
-            "devServerTarget": "todos:serve"
+            "cypressConfig": "apps/Ronald Xu-e2e/cypress.json",
+            "tsConfig": "apps/Ronald Xu-e2e/tsconfig.e2e.json",
+            "devServerTarget": "Ronald Xu:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "todos:serve:production"
+              "devServerTarget": "Ronald Xu:serve:production"
             }
           }
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/todos-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": ["apps/Ronald Xu-e2e/**/*.{js,ts}"]
           }
         }
       }
@@ -120,5 +120,5 @@
       }
     }
   },
-  "defaultProject": "todos"
+  "defaultProject": "Ronald Xu"
 }
