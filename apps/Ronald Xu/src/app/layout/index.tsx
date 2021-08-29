@@ -1,10 +1,14 @@
 import React from 'react';
-import { Button } from 'antd';
+import { AppHeader } from '../header';
+import '../../assets/css/light-theme.css'
 
-export const AppLayout: React.FC = () => {
+const AppLayout: React.FC = () => {
+
   return (
-    <Button type="primary">
-        hi
-    </Button>
+    <div>
+      <AppHeader />
+    </div>
   );
 };
+
+export { AppLayout };
