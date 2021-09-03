@@ -6,4 +6,12 @@ interface FlexProps {
   flexDirection?: string;
 }
 
-export { FlexProps };
+interface AppContentProps {
+  dark: boolean;
+}
+
+interface ProjectSectionProps {
+  dark: boolean;
+}
+
+export { FlexProps, AppContentProps, ProjectSectionProps };
