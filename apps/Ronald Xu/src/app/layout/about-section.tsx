@@ -1,5 +1,5 @@
-import { Row, Col, Space } from 'antd';
 import React from 'react';
+import { Row, Col, Space } from 'antd';
 
 const AboutSection: React.FC = () => {
   return (
