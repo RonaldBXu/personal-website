@@ -1,22 +1,22 @@
 {
   "version": 2,
   "projects": {
-    "Ronald Xu": {
-      "root": "apps/Ronald Xu",
-      "sourceRoot": "apps/Ronald Xu/src",
+    "personal-website": {
+      "root": "apps/personal-website",
+      "sourceRoot": "apps/personal-website/src",
       "projectType": "application",
       "targets": {
         "build": {
           "executor": "@nrwl/web:build",
           "outputs": ["{options.outputPath}"],
           "options": {
-            "outputPath": "dist/apps/Ronald Xu",
-            "index": "apps/Ronald Xu/src/index.html",
-            "main": "apps/Ronald Xu/src/main.tsx",
-            "polyfills": "apps/Ronald Xu/src/polyfills.ts",
-            "tsConfig": "apps/Ronald Xu/tsconfig.app.json",
-            "assets": ["apps/Ronald Xu/src/favicon.ico", "apps/Ronald Xu/src/assets"],
-            "styles": ["apps/Ronald Xu/src/styles.css"],
+            "outputPath": "dist/apps/personal-website",
+            "index": "apps/personal-website/src/index.html",
+            "main": "apps/personal-website/src/main.tsx",
+            "polyfills": "apps/personal-website/src/polyfills.ts",
+            "tsConfig": "apps/personal-website/tsconfig.app.json",
+            "assets": ["apps/personal-website/src/favicon.ico", "apps/personal-website/src/assets"],
+            "styles": ["apps/personal-website/src/styles.css"],
             "scripts": [],
             "webpackConfig": "@nrwl/react/plugins/webpack"
           },
@@ -24,8 +24,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "apps/Ronald Xu/src/environments/environment.ts",
-                  "with": "apps/Ronald Xu/src/environments/environment.prod.ts"
+                  "replace": "apps/personal-website/src/environments/environment.ts",
+                  "with": "apps/personal-website/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -48,12 +48,12 @@
         "serve": {
           "executor": "@nrwl/web:dev-server",
           "options": {
-            "buildTarget": "Ronald Xu:build",
+            "buildTarget": "personal-website:build",
             "hmr": true
           },
           "configurations": {
             "production": {
-              "buildTarget": "Ronald Xu:build:production",
+              "buildTarget": "personal-website:build:production",
               "hmr": false
             }
           }
@@ -61,41 +61,41 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/Ronald Xu/**/*.{ts,tsx,js,jsx}"]
+            "lintFilePatterns": ["apps/personal-website/**/*.{ts,tsx,js,jsx}"]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/Ronald Xu"],
+          "outputs": ["coverage/apps/personal-website"],
           "options": {
-            "jestConfig": "apps/Ronald Xu/jest.config.js",
+            "jestConfig": "apps/personal-website/jest.config.js",
             "passWithNoTests": true
           }
         }
       }
     },
-    "Ronald Xu-e2e": {
-      "root": "apps/Ronald Xu-e2e",
-      "sourceRoot": "apps/Ronald Xu-e2e/src",
+    "personal-website-e2e": {
+      "root": "apps/personal-website-e2e",
+      "sourceRoot": "apps/personal-website-e2e/src",
       "projectType": "application",
       "targets": {
         "e2e": {
           "executor": "@nrwl/cypress:cypress",
           "options": {
-            "cypressConfig": "apps/Ronald Xu-e2e/cypress.json",
-            "tsConfig": "apps/Ronald Xu-e2e/tsconfig.e2e.json",
-            "devServerTarget": "Ronald Xu:serve"
+            "cypressConfig": "apps/personal-website-e2e/cypress.json",
+            "tsConfig": "apps/personal-website-e2e/tsconfig.e2e.json",
+            "devServerTarget": "personal-website:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "Ronald Xu:serve:production"
+              "devServerTarget": "personal-website:serve:production"
             }
           }
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/Ronald Xu-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": ["apps/personal-website-e2e/**/*.{js,ts}"]
           }
         }
       }
@@ -120,5 +120,5 @@
       }
     }
   },
-  "defaultProject": "Ronald Xu"
+  "defaultProject": "personal-website"
 }

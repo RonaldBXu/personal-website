@@ -33,13 +33,13 @@
     ]
   },
   "projects": {
-    "Ronald Xu": {
+    "personal-website": {
       "tags": []
     },
-    "Ronald Xu-e2e": {
+    "personal-website-e2e": {
       "tags": [],
       "implicitDependencies": [
-        "Ronald Xu"
+        "personal-website"
       ]
     }
   }
