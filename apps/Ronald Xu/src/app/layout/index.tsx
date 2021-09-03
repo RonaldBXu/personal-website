@@ -1,10 +1,24 @@
-import React from 'react';
-import { Button } from 'antd';
+import React, { useState } from 'react';
+import { AppHeader } from '../header';
+import '../../assets/css/light-theme.css';
+import { AppContent } from './app-content';
+import { message } from 'antd';
 
-export const AppLayout: React.FC = () => {
+const AppLayout: React.FC = () => {
+  const [dark, setDark] = useState<boolean>(false);
+  const changeMode = () => {
+    if (!dark) {
+      setDark(true);
+      require('../../assets/css/dark-theme.css');
+      message.info("What's this?", 3);
+    }
+  };
   return (
-    <Button type="primary">
-        hi
-    </Button>
+    <div>
+      <AppHeader changeMode={changeMode} dark={dark} />
+      <AppContent dark={dark} />
+    </div>
   );
 };
+
+export { AppLayout };
